@@ -2,9 +2,11 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-	std::function<void(double)> metaOutput = [](double x) {  cout << "Hi " << x; };
-	system = Syst(metaOutput);
-	system.output(2);
+	std::function<void(Input)> metaOutput = [](Input x) {
+		cout << "how are you?" << x << endl;
+	};
+	Syst system = Syst(metaOutput, 10);
+	system.output();
 }
 
 //--------------------------------------------------------------

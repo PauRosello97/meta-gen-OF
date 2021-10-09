@@ -1,22 +1,27 @@
-#pragma once
+//#pragma once
 
-#pragma once
-
-#include "ofMain.h"
+//#include "ofMain.h"
 #include <functional>
+#include <iostream>
 
+using namespace std;
 class Syst {
 
 public:
+	using Input = float;
 
-	std::function<void(double)> output;
+	std::function<void(Input)> metaOutput;
+	std::function<void()> output;
+	Input input;
 
-	Syst(function<void(double)> metaOutput){
-		output = metaOutput;
+	Syst(std::function<void(Input)> _metaOutput, Input _input) {
+		metaOutput = _metaOutput;
+		input = _input;
+
+		output = [&]() {
+			metaOutput(input);
+		};
 	}
-
-	Syst(){}
-
 };
 
 

@@ -5,10 +5,12 @@
 #include "System.h"
 
 class ofApp : public ofBaseApp{
-	MetaSystem metaSystem;
-	Syst system;
 
+	MetaSystem metaSystem;
+	using Input = float;
+	   
 	public:
+
 		void setup();
 		void update();
 		void draw();
