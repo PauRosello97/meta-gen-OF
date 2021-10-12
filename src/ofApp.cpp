@@ -1,19 +1,18 @@
 #include "ofApp.h"
 
 void ofApp::setup(){
-	std::function<void(Input)> metaOutput = [](Input x) {
-		cout << x << endl;
+	std::function<void(Input)> tempMetaOutput = [](Input x) {
+		ofDrawRectangle(100, 100, 100, 100);
 	};
-	Syst syst = Syst(metaOutput, 10);
-	system = syst;
+	system.setMetaOutput(tempMetaOutput);
+	system.setInput(10.f);
 	system.output();
 }
 
 void ofApp::update() {
-	system.output();
 }
 
 void ofApp::draw(){
-	//system.output();
+	system.output();
 }
 

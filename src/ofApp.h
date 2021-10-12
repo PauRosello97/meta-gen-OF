@@ -4,13 +4,15 @@
 #include "Syst.h"
 #include <iostream>
 
-class ofApp : public ofBaseApp{
 
-	Syst system;
-	using Input = float;
-	   
-	public:
-		void setup();
-		void update();
-		void draw();
+class ofApp : public ofBaseApp {
+    using Input = float;
+
+public:
+    void setup();
+    void update();
+    void draw();
+
+
+    Syst system;
 };
