@@ -181,13 +181,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\MetaSystem.cpp" />
+    <ClCompile Include="src\Syst.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MetaSystem.h" />
     <ClInclude Include="src\ofApp.h" />
-    <ClInclude Include="src\System.h" />
+    <ClInclude Include="src\Syst.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

@@ -1,74 +1,19 @@
 #include "ofApp.h"
 
-//--------------------------------------------------------------
 void ofApp::setup(){
 	std::function<void(Input)> metaOutput = [](Input x) {
-		cout << "how are you?" << x << endl;
+		cout << x << endl;
 	};
-	Syst system = Syst(metaOutput, 10);
+	Syst syst = Syst(metaOutput, 10);
+	system = syst;
 	system.output();
 }
 
-//--------------------------------------------------------------
-void ofApp::update(){
-
+void ofApp::update() {
+	system.output();
 }
 
-//--------------------------------------------------------------
 void ofApp::draw(){
+	//system.output();
 }
 
-//--------------------------------------------------------------
-void ofApp::keyPressed(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::gotMessage(ofMessage msg){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
-}

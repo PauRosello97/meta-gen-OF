@@ -1,10 +1,9 @@
-//#pragma once
-
-//#include "ofMain.h"
+#pragma once
+#include "ofMain.h"
 #include <functional>
-#include <iostream>
 
 using namespace std;
+
 class Syst {
 
 public:
@@ -22,6 +21,6 @@ public:
 			metaOutput(input);
 		};
 	}
+
+	Syst(){}
 };
-
-
